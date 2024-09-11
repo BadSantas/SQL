@@ -1,0 +1,54 @@
+SQL
+-- Вставка данных в таблицу исполнителей
+INSERT INTO artist (name) VALUES ('Artist 1');
+INSERT INTO artist (name) VALUES ('Artist 2');
+INSERT INTO artist (name) VALUES ('Artist 3');
+INSERT INTO artist (name) VALUES ('Artist 4');
+
+-- Вставка данных в таблицу жанров
+INSERT INTO genre (name) VALUES ('Rock');
+INSERT INTO genre (name) VALUES ('Pop');
+INSERT INTO genre (name) VALUES ('Jazz');
+
+-- Вставка данных в таблицу альбомов
+INSERT INTO album (title, release_year) VALUES ('Album 1', 2020);
+INSERT INTO album (title, release_year) VALUES ('Album 2', 2021);
+INSERT INTO album (title, release_year) VALUES ('Album 3', 2022);
+
+-- Вставка данных в таблицу треков
+INSERT INTO track (title, duration, album_id) VALUES ('Track 1', 210, 1);
+INSERT INTO track (title, duration, album_id) VALUES ('Track 2', 180, 1);
+INSERT INTO track (title, duration, album_id) VALUES ('Track 3', 240, 2);
+INSERT INTO track (title, duration, album_id) VALUES ('Track 4', 200, 2);
+INSERT INTO track (title, duration, album_id) VALUES ('Track 5', 220, 3);
+INSERT INTO track (title, duration, album_id) VALUES ('Track 6', 230, 3);
+
+-- Вставка данных в таблицу сборников
+INSERT INTO compilation (title, release_year) VALUES ('Compilation 1', 2020);
+INSERT INTO compilation (title, release_year) VALUES ('Compilation 2', 2021);
+INSERT INTO compilation (title, release_year) VALUES ('Compilation 3', 2022);
+INSERT INTO compilation (title, release_year) VALUES ('Compilation 4', 2023);
+
+-- Вставка данных в промежуточную таблицу artist_genre
+INSERT INTO artist_genre (artist_id, genre_id) VALUES (1, 1);
+INSERT INTO artist_genre (artist_id, genre_id) VALUES (1, 2);
+INSERT INTO artist_genre (artist_id, genre_id) VALUES (2, 2);
+INSERT INTO artist_genre (artist_id, genre_id) VALUES (3, 3);
+INSERT INTO artist_genre (artist_id, genre_id) VALUES (4, 1);
+
+-- Вставка данных в промежуточную таблицу artist_album
+INSERT INTO artist_album (artist_id, album_id) VALUES (1, 1);
+INSERT INTO artist_album (artist_id, album_id) VALUES (2, 2);
+INSERT INTO artist_album (artist_id, album_id) VALUES (3, 3);
+INSERT INTO artist_album (artist_id, album_id) VALUES (4, 1);
+INSERT INTO artist_album (artist_id, album_id) VALUES (1, 2);
+
+-- Вставка данных в промежуточную таблицу compilation_track
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (1, 1);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (1, 2);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (2, 3);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (2, 4);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (3, 5);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (3, 6);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (4, 1);
+INSERT INTO compilation_track (compilation_id, track_id) VALUES (4, 3);
